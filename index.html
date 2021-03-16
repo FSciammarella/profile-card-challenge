@@ -5,12 +5,27 @@
     <link rel="icon" href="/profile-card-challenge/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-  <script type="module" crossorigin src="/profile-card-challenge/assets/index.a157b1c2.js"></script>
-  <link rel="modulepreload" href="/profile-card-challenge/assets/vendor.d0457e35.js">
+  <script type="module" crossorigin src="/profile-card-challenge/assets/index.b790b98a.js"></script>
+  <link rel="modulepreload" href="/profile-card-challenge/assets/vendor.b3fe18b4.js">
   <link rel="stylesheet" href="/profile-card-challenge/assets/index.5b334ec5.css">
 </head>
   <body>
-    <div class="app" id="app"></div>
+    <div class="relative bg-primary overflow-hidden">
+      <div
+        class="app h-screen w-full overflow-hidden flex items-center justify-center"
+        id="app"
+      ></div>
+      <img
+        class="z-0 absolute top-0 left-0 transform -translate-y-1/2 -translate-x-1/4"
+        src="../../../src/assets/mocks/profile-card-component-main/images/bg-pattern-top.svg"
+        alt=""
+      />
+      <img
+        class="z-0 absolute bottom-0 right-0 transform translate-x-1/4 translate-y-3/4"
+        src="../../../src/assets/mocks/profile-card-component-main/images/bg-pattern-bottom.svg"
+        alt=""
+      />
+    </div>
     
   </body>
 </html>
