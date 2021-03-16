@@ -1,24 +1,22 @@
 <template>
-  <div
-    class="relative bg-primary h-screen w-full overflow-hidden flex items-center justify-center"
-  >
-    <img
-      class="z-0 absolute top-0 left-0 transform -translate-y-1/2 -translate-x-1/4"
-      src="../../../src/assets/mocks/profile-card-component-main/images/bg-pattern-top.svg"
-      alt=""
-    />
-    <img
-      class="z-0 absolute bottom-0 right-0 transform translate-x-1/4 translate-y-3/4"
-      src="../../../src/assets/mocks/profile-card-component-main/images/bg-pattern-bottom.svg"
-      alt=""
-    />
-    <profile-card class="z-10" />
-  </div>
+  <profile-card :user="user" class="z-10" />
 </template>
 
 <script>
 import ProfileCard from './ProfileCard.vue';
 export default {
+  data() {
+    let user = {
+      name: 'Victor Crest',
+      age: 26,
+      picture: 'images/image-victor.jpg',
+      location: 'London',
+      followers: '80K',
+      likes: '803K',
+      photos: '1.4K',
+    };
+    return { user };
+  },
   components: { ProfileCard },
   name: 'ProfileCardContainer',
 };

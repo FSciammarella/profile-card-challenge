@@ -6,24 +6,31 @@
     <div
       class="flex h-2/5 flex-col items-center border-b border-solid border-dark-grey border-opacity-30"
     >
-      <profile-card-picture />
+      <profile-card-picture :src="user.picture" />
       <h1>
-        <span class="text-2xl font-semibold text-dark-d-blue">Victor Crest</span
-        ><span class="text-lg font-regular text-dark-grey ml-3">26</span>
+        <span class="text-2xl font-semibold text-dark-d-blue">{{
+          user.name
+        }}</span
+        ><span class="text-lg font-regular text-dark-grey ml-3">{{
+          user.age
+        }}</span>
       </h1>
-      <h2 class="text-lg font-light text-dark-grey">London</h2>
+      <h2 class="text-lg font-light text-dark-grey">{{ user.location }}</h2>
     </div>
     <div
       class="h-1/5 flex flex-row text-lg text-dark-d-blue font-bold box-border"
     >
       <div class="card-stats">
-        <span>80K</span><span class="card-stats-description">Followers</span>
+        <span>{{ user.followers }}</span
+        ><span class="card-stats-description">Followers</span>
       </div>
       <div class="card-stats">
-        <span>803K</span><span class="card-stats-description">Likes</span>
+        <span>{{ user.likes }}</span
+        ><span class="card-stats-description">Likes</span>
       </div>
       <div class="card-stats">
-        <span>1.4K</span><span class="card-stats-description">Photos</span>
+        <span>{{ user.photos }}</span
+        ><span class="card-stats-description">Photos</span>
       </div>
     </div>
   </div>
@@ -32,6 +39,7 @@
 <script>
 import ProfileCardPicture from './ProfileCardPicture.vue';
 export default {
+  props: ['header-background', 'user'],
   components: { ProfileCardPicture },
   name: 'ProfileCard',
 };
